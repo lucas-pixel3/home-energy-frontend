@@ -13,10 +13,7 @@ module.exports = {
   devServer: {
     port: 8080,
     open: true,
-    overlay: {
-      warnings: false,
-      errors: true
-    }
+    
     // 如果需要代理API
     // proxy: {
     //   '/api': {
@@ -29,7 +26,7 @@ module.exports = {
   configureWebpack: {
     resolve: {
       alias: {
-        '@': resolve('src')
+        '@': path.resolve(__dirname, 'src')
       }
     }
   }
